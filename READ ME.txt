@@ -1,0 +1,24 @@
+Dio projekta iz kolegija "Sigurnost informacijskih sustava" u kojemu je zadatak bio usporediti
+brzine različitih hash funkcija.
+
+Ovaj dio projekta rađen je u programskom jeziku PHP koristeći PHPStorm okruženje i programski alat XAMPP.
+Kako bi se omogućilo ispisivanje zadatka na ekran, odnosno u web preglednik, potrebno je napraviti određene sljedeće korake.
+
+1. Kopirati cjelokupan folder na određeno mjesto na računalu, u datoteku X.
+2. Napraviti virtualni host kako bi se projekt mogao pokrenuti, što podrazumijeva:
+	a. U Windows datoteku hosts na putanji C:/Windows/System32/drivers/etc/hosts postaviti IP adresu 
+		i naziv domene kako bi se moglo pristupiti projektu iz web preglednika.
+		npr: 127.0.0.1		hashiranje.local
+	
+	b. U Xampp u datotekama apache/conf/extra/httpd-vhosts.conf postaviti host.
+		npr:
+			<VirtualHost *:80>
+			DocumentRoot "X"
+			ServerName hashiranje.local
+			</VirtualHost>
+			
+			gdje je X putanja datoteke gdje je spremljen zadatak.
+			ServerName iz datoteke hosts mora se podudarati s ServerName varijablom unutar ove datoteke.
+			
+3. Nakon učinjenih koraka potrebno je ponovno pokrenuti XAMPP i ukoliko se uspješno pokrene, svi koraci su dobro napravljeni i moguće je pristupiti
+	zadataku putem web preglednika koristeći putanju hashiranje.local.
